@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build || true  # Ignores build failures
 
 # Nginx stage
-FROM nginx:alpine
+FROM nginx:1.29.5-alpine3.23
 
 # Vulnerability: Exposing sensitive data in nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
